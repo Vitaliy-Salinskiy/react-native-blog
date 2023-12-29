@@ -1,4 +1,4 @@
-import { View, Text } from "react-native"
+import { View, Text } from "react-native";
 
 const Register = () => {
 
@@ -9,4 +9,4 @@ const Register = () => {
 	)
 }
 
-export default Register
+export default Register 
