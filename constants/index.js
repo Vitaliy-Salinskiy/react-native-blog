@@ -54,4 +54,19 @@ const blogItems = [
 
 const tagsList = ["All", "Technology", "Lifestyle", "Business", "Culture"]
 
-export { images, icons, blogItems, tagsList };
+const navigationLinks = [
+	{
+		image: icons.home,
+		path: "/home"
+	},
+	{
+		image: icons.bookmark,
+		path: "/posts/saved"
+	},
+	{
+		image: icons.profile1,
+		path: "/login"
+	}
+]
+
+export { images, icons, blogItems, tagsList, navigationLinks };
