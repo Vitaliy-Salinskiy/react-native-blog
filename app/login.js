@@ -1,4 +1,4 @@
-import { Stack } from "expo-router"
+import { useRouter } from "expo-router"
 import { View, Text, ScrollView, Image, TouchableOpacity, Dimensions } from "react-native"
 import { Controller, useForm } from "react-hook-form"
 
@@ -9,6 +9,7 @@ import { images, icons } from "../constants/index.js"
 
 const Login = () => {
 
+	const router = useRouter();
 	const { control, handleSubmit } = useForm({
 		defaultValues: {
 			username: "",
@@ -16,7 +17,10 @@ const Login = () => {
 		}
 	});
 
-	const onSubmit = (data) => console.log(`Data:`, data);
+	const onSubmit = (data) => {
+		console.log(`Data:`, data);
+		router.push("/home");
+	}
 
 	return (
 		<ScrollView contentContainerStyle={{ alignItems: "center", flexGrow: 1, width: "100%" }}>
@@ -28,13 +32,7 @@ const Login = () => {
 					/>
 				</View>
 
-				<Stack.Screen
-					options={{
-						headerShown: false
-					}}
-				/>
-
-				<View style={{ marginTop: 25 }}>
+				<View style={{ marginTop: 25, marginBottom: 25 }}>
 					<View style={{ alignItems: "center", gap: 19 }}>
 						<Text style={{ color: "#262626", fontSize: 64, fontWeight: 700, }}>Hello</Text>
 						<Text style={{ color: "#262626", fontSize: 18, fontWeight: 400, }}>Sign in to your account</Text>
@@ -49,7 +47,7 @@ const Login = () => {
 									required: "Username is required",
 									minLength: {
 										value: 4,
-										message: "Username must be at least 8 characters long"
+										message: "Username must be at least 4 characters long"
 									},
 									maxLength: {
 										value: 20,
@@ -77,7 +75,7 @@ const Login = () => {
 									required: "Password is required",
 									minLength: {
 										value: 4,
-										message: "Password must be at least 8 characters long"
+										message: "Password must be at least 5 characters long"
 									},
 									maxLength: {
 										value: 20,
@@ -92,7 +90,7 @@ const Login = () => {
 											onChange={onChange}
 											placeholder="Password"
 											icon={icons.locker}
-											type="text"
+											type="password"
 										/>
 										{error && <Text style={{ color: "red", fontSize: 13, marginLeft: 5 }}>{error.message}</Text>}
 									</View>
@@ -108,8 +106,8 @@ const Login = () => {
 							<FormButton label="Sign in" onPress={handleSubmit(onSubmit)} />
 						</View>
 
-						<TouchableOpacity style={{ marginTop: 75, alignItems: 'center', }}>
-							<Text style={{ alignItems: "center", justifyContent: "center" }}>
+						<TouchableOpacity style={{ marginTop: 75, alignItems: 'center', }} onPress={() => router.push("/register")}>
+							<Text style={{ alignItems: "center", justifyContent: "center", fontSize: 15, color: "#262626" }}>
 								Don't have an account? {""}
 								<Text style={{ textDecorationLine: "underline" }}>Create</Text>
 							</Text>
@@ -118,7 +116,7 @@ const Login = () => {
 				</View>
 
 			</View>
-			<View style={{ position: "absolute", bottom: 0, left: 0 }}>
+			<View style={{ position: "absolute", bottom: 0, left: -30 }}>
 				<Image
 					source={images.wave2}
 					resizeMode="cover"

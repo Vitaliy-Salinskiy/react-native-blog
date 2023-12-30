@@ -2,7 +2,7 @@ import { Image, TextInput, View } from 'react-native';
 
 import styles from './Input.style';
 
-const Input = ({ placeholder, type, icon, iconSize, value, onBlur, onChange }) => {
+const Input = ({ placeholder, type, keyboardType, icon, iconSize, value, onBlur, onChange }) => {
 
 	return (
 		<View style={styles.input}>
@@ -20,6 +20,7 @@ const Input = ({ placeholder, type, icon, iconSize, value, onBlur, onChange }) =
 				placeholder={placeholder}
 				secureTextEntry={type === "password" ? true : false}
 				type={type ? type : "text"}
+				keyboardType={keyboardType ? keyboardType : "default"}
 			/>
 		</View>
 	);
