@@ -16,7 +16,7 @@ const Footer = () => {
 			backgroundColor: "#fff",
 			shadowColor: '#000',
 			shadowOffset: { width: 0, height: -2 },
-			shadowOpacity: 0.1,
+			shadowOpacity: 0.35,
 			shadowRadius: 8,
 			elevation: 8,
 		}}>

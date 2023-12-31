@@ -10,6 +10,8 @@ import notification from "../assets/icons/notification.png";
 import save from "../assets/icons/save.png";
 import bookmark from "../assets/icons/bookmark.png";
 import home from "../assets/icons/home.png";
+import arrow from "../assets/icons/arrow.png";
+import share from "../assets/icons/share.png";
 
 export default {
 	profile,
@@ -23,5 +25,7 @@ export default {
 	notification,
 	save,
 	bookmark,
-	home
+	home,
+	arrow,
+	share
 }
