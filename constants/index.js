@@ -7,7 +7,7 @@ const blogItems = [
 		title: "New VR Headsets That Will Shape the Metaverse",
 		content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id sit eu tellus sed cursus eleifend id porta. Lorem adipiscing mus vestibulum consequat porta eu ultrices feugiat. Et, faucibus ut amet turpis. Facilisis faucibus semper cras purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id sit eu tellus sed cursus eleifend id porta. Fermentum et eget libero lectus. Amet, tellus aliquam, dignissim enim placerat purus nunc, ac ipsum. Ac pretium.",
 		image: images.post1,
-		tag: "Technology",
+		tag: "Lifestyle",
 		author: {
 			username: "Mason Eduard",
 			avatar: images.author1

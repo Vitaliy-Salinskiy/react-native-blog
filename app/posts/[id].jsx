@@ -34,10 +34,11 @@ const PostDetails = () => {
 			<View style={{ width: "90%", flex: 1, }}>
 				{blogItems.filter(post => post.id === +id).map((post, index) => (
 					<ScrollView
+						key={`${post.title}-${post.id}-${index}`}
 						showsVerticalScrollIndicator={false}
 						contentContainerStyle={{ paddingTop: 15 }}
 					>
-						<DetailsPostCard post={post} key={`${post.title}-${post.id}-${index}`} />
+						<DetailsPostCard post={post} />
 						<View style={{ marginTop: 15 }}>
 							<Text style={{ color: "#2C2C2C", fontSize: 16 }}>{post.content} Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo distinctio itaque, error, repudiandae sint qui sit illum odio quod dignissimos culpa a deserunt reiciendis libero neque magnam. Culpa nisi vero et velit sapiente libero magnam ipsum fugiat amet provident harum praesentium mollitia cum error sit, commodi aut. Ad, quasi corporis?</Text>
 						</View>

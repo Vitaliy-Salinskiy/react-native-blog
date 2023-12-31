@@ -2,8 +2,10 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { Link } from 'expo-router'
 
 const TagPostCard = ({ post }) => {
+
+
 	return (
-		<View style={{ height: 80, gap: 12, flexDirection: "row" }}>
+		<View style={{ height: 80, gap: 12, flexDirection: "row", }}>
 			<View style={{ height: 80, width: 96, overflow: 'hidden', borderRadius: 16 }}>
 				<Image source={post.image} style={{ width: 96, height: 80 }} resizeMode='cover' />
 			</View>
